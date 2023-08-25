@@ -1,4 +1,4 @@
-# Jira Conventions 세미나
+# Jira Conventions
 
 작성일: 2023-08-25 <br>
 작성자: 김예진
