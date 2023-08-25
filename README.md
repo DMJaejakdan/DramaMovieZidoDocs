@@ -10,6 +10,7 @@
 
 - [architecture](architecture/README.md) 설계
 - [conventions](conventions/README.md) 컨벤션
+  - [Jira 컨벤션](conventions/jira.md)
 - [development](development/README.md) 개발
 - [operations](operations/README.md) 운영
 - [proposal](proposal/README.md) 기획
