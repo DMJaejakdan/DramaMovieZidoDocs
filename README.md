@@ -1,4 +1,6 @@
-# TempDocs
+# 드라마영화지도 기술문서
+
+> 드라마영화지도의 자료를 관리하는 기술문서 레포지토리입니다.
 
 ### EXTERNAL LINKS
 
@@ -15,6 +17,9 @@
 - [development](development/README.md) 개발
 - [operations](operations/README.md) 운영
 - [proposal](proposal/README.md) 기획
+- [design](design/README.md)
+  - [로고](design/logo.md)
+
 - [research](research/README.md) 공부
 - [review](review/README.md) 회고
 - [seminar](seminar/README.md) 세미나
