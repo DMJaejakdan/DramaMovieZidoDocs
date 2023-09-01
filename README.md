@@ -23,4 +23,8 @@
 - [research](research/README.md) 공부
 - [review](review/README.md) 회고
 - [seminar](seminar/README.md) 세미나
+- [mentoring](mentoring/README.md) 전문가 리뷰
+  - [전문가 리뷰 사전 설문](mentoring/pre-survey.md)
+  - [프로젝트 소개 및 사전 질문 - 파일](mentoring/project_introduction_and_pre_questions.pdf)
+
 
