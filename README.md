@@ -28,6 +28,6 @@
     - [전문가 리뷰 사전 설문](mentoring/first/pre-survey.md)
     - [프로젝트 소개 및 사전 질문 - 파일](mentoring/first/project_introduction_and_pre_questions.pdf)
     - [사전 질문 점검](mentoring/first/checking-pre-queston.md)
-    - [멘티 활동 일지](mentoring/first/mentoring-program-review.pdf)
+    - [멘티 활동 일지 - 파일](mentoring/first/mentoring-program-review.pdf)
   
 
