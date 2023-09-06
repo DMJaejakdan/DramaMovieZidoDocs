@@ -16,6 +16,8 @@
   - [Docs Conventions](conventions/docs.md)
 - [development](development/README.md) 개발
 - [operations](operations/README.md) 운영
+  - [역할 분담](operations/roles.md)
+
 - [proposal](proposal/README.md) 기획
 - [design](design/README.md)
   - [로고](design/logo.md)
@@ -29,5 +31,5 @@
     - [프로젝트 소개 및 사전 질문 - 파일](mentoring/first/project_introduction_and_pre_questions.pdf)
     - [사전 질문 점검](mentoring/first/checking-pre-queston.md)
     - [멘티 활동 일지 - 파일](mentoring/first/mentoring-program-review.pdf)
-  
+
 
