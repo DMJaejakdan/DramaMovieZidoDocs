@@ -31,5 +31,7 @@
     - [프로젝트 소개 및 사전 질문 - 파일](mentoring/first/project_introduction_and_pre_questions.pdf)
     - [사전 질문 점검](mentoring/first/checking-pre-queston.md)
     - [멘티 활동 일지 - 파일](mentoring/first/mentoring-program-review.pdf)
+- [expert-interview](expert-interview/README.md) 드라마 관계자 리뷰
+  - [1차 드라마 관계자 리뷰](expert-interview/first-interview.md)
 
 
