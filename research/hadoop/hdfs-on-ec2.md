@@ -4,13 +4,11 @@
 작성자: 김예진
 
 > **목차**
->
 > 1. [Host에 localhost 추가](#host에-localhost-추가)
 >    1. [SSH key pairs 생성](#ssh-key-paris-생성)
 >    2. [Passwordless SHH 설정](#passwordless-shh-설정)
 >    3. [Host에 localhost 추가](#host에-localhost-추가)
->
-> 2. [하둡 설치](#하둡-설치)
+> 2. [하둡 설치](#2-하둡-설치)
 >    1. [하둡 다운로드](#하둡-다운로드)
 >    2. [압축 해제 및 symbolic link 생성](#압축-해제-및-symbolic-link-생성)
 > 3. [하둡 초기 설정을 위한 자바 설치](#3-하둡-초기-설정을-위한-자바-설치)
@@ -18,19 +16,17 @@
 >    2.  [jdk 설치](#jdk-설치)
 >    3. [Java 버전 확인](#java-버전-확인)
 >    4. [JAVA_HOME 등록](#java_home-등록)
-> 4. [하둡 초기 설정](#하둡-초기-설정)
->    1. [`etc/hadoop/hadoop-env.sh`에 HADOOP_HOME 환경변수 설정]()
->    2. `etc/hadoop/core-site.xml`에서 기본 파일 시스템 URI 수정
->    3. `etc/hadoop/hdfs-site.xml`에서 replica의 수를 1로, 기본 block 크기를 256MB로 설정
+> 4. [하둡 초기 설정](#4-하둡-초기-설정)
+>    1. [`etc/hadoop/hadoop-env.sh`에 HADOOP_HOME 환경변수 설정](#etchadoophadoop-envsh에-hadoop_home-환경변수-설정)
+>    2. [`etc/hadoop/core-site.xml`에서 기본 파일 시스템 URI 수정](#etchadoopcore-sitexml에서-기본-파일-시스템-uri-수정)
+>    3. [`etc/hadoop/hdfs-site.xml`에서 replica의 수를 1로, 기본 block 크기를 256MB로 설정](#etchadoophdfs-sitexml에서-replica의-수를-1로-기본-block-크기를-256mb로-설정)
 >    4. [Namenode 포맷](#namenode-포맷)
 > 5. [DFS 실행](#5-dfs-실행)
 >    1. [DFS 실행](#dfs-실행)
 >    2. [모든 데몬이 정상적으로 돌아가고 있는지 확인](#모든-데몬이-정상적으로-돌아가고-있는지-확인)
->
 > 6. [기타. 하둡 관련](#기타-하둡-관련)
->    1. [하둡 데몬 관련 포트](#하둡-데몬-관련-포트)
->    2. [하둡 명령어](#하둡-명령어)
->
+>    1. [하둡 데몬 관련 포트](#1-하둡-데몬-관련-포트)
+>    2. [하둡 명령어](#2-하둡-명령어)
 
 # 1. Host에 localhost 추가
 
