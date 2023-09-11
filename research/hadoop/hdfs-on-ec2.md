@@ -4,6 +4,7 @@
 작성자: 김예진
 
 > **목차**
+>
 > 1. [Host에 localhost 추가](#host에-localhost-추가)
 >    1. [SSH key pairs 생성](#ssh-key-paris-생성)
 >    2. [Passwordless SHH 설정](#passwordless-shh-설정)
@@ -13,9 +14,10 @@
 >    2. [압축 해제 및 symbolic link 생성](#압축-해제-및-symbolic-link-생성)
 > 3. [하둡 초기 설정을 위한 자바 설치](#3-하둡-초기-설정을-위한-자바-설치)
 >    1. [사용 가능한 자바 버전 확인](#사용-가능한-자바-버전-확인)
->    2.  [jdk 설치](#jdk-설치)
+>    2. [jdk 설치](#jdk-설치)
 >    3. [Java 버전 확인](#java-버전-확인)
->    4. [JAVA_HOME 등록](#java_home-등록)
+>    4. [Java가 등록된 경로 확인](#java가-등록된-경로-확인)
+>    5. [JAVA_HOME 등록](#java_home-등록)
 > 4. [하둡 초기 설정](#4-하둡-초기-설정)
 >    1. [`etc/hadoop/hadoop-env.sh`에 HADOOP_HOME 환경변수 설정](#etchadoophadoop-envsh에-hadoop_home-환경변수-설정)
 >    2. [`etc/hadoop/core-site.xml`에서 기본 파일 시스템 URI 수정](#etchadoopcore-sitexml에서-기본-파일-시스템-uri-수정)
@@ -63,36 +65,39 @@
 
 # 3. 하둡 초기 설정을 위한 자바 설치
 
+[Hadoop Java Version](https://cwiki.apache.org/confluence/display/HADOOP/Hadoop+Java+Versions)을 참고하면 우리가 설치하려는 하둡의 버전(2.7.6)이 지원하는 자바 버전은 7과 8이다. 그러므로 jdk 설치 시 이 점에 유의해야 한다.
+
 1. ### 사용 가능한 자바 버전 확인
    ```bash
-   sudo yum list | grep correto
-   ```
-   혹은 
-   ```bash
-   sudo yum list | grep jdk
+   sudo apt list | grep jdk-8
    ```
    ![](images/hadoop03.PNG)
+
 2. ###  jdk 설치
    ```bash
-   sudo yum install java-17-amazon-corretto.x86_64
+   sudo apt-get update
+   sudo apt-get install openjdk-8-jdk
    ```
+
 3. ### Java 버전 확인
    ```bash
    java -version
    ```
    ![](images/hadoop04.PNG)
-4. `jps` 사용을 위한 ant 설치
 
+4. ### Java가 등록된 경로 확인
    ```bash
-   sudo yum install ant
+   readlink -f $(which java)
    ```
+   ![](images/hadoop09.PNG)
+
 5. ### JAVA_HOME 등록
 
    ```bash
    sudo vim /etc/profile
    ```
    ```shell
-   export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+   export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
    ```
    ```bash
    source /etc/profile
@@ -144,6 +149,7 @@
    ```
    ![](images/hadoop06.PNG)
    ```bash
+   sudo apt install net-tools
    sudo netstat -antup | grep LISTEN
    ```
    ![](images/hadoop07.PNG)
@@ -163,7 +169,7 @@
 1. ### HDFS에 user-specific directory 생성
 
    ```bash
-   bin/hadoop fs -mkdir -p /user/ec2-user
+   bin/hadoop fs -mkdir -p /user/<username>
    ```
 
 2. ### HDFS에 파일 업로드 해보기
@@ -171,8 +177,6 @@
    ```bash
    bin/hadoop fs -put NOTICE.txt input
    ```
-
-   
 
 # 기타. 하둡 관련
 
