@@ -23,6 +23,11 @@
   - [로고](design/logo.md)
 
 - [research](research/README.md) 공부
+  - [하둡 실습](research/hadoop/README.md)
+    - [하둡 실습을 위한 EC2 발급](research/hadoop/create-ec2-instance.md)
+    - [EC2 위에 하둡 올리기](research/hadoop/hdfs-on-ec2.md)
+    - [MapReduce 실습하기](research/hadoop/practice-mapreduce.md)
+  
 - [review](review/README.md) 회고
 - [seminar](seminar/README.md) 세미나
 - [mentoring](mentoring/README.md) 전문가 리뷰
