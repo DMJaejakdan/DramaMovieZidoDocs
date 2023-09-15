@@ -11,17 +11,16 @@
 # Documentation
 
 - [architecture](architecture/README.md) 설계
+  - [ERD](architecture/erd.md)
 - [conventions](conventions/README.md) 컨벤션
   - [Jira Conventions](conventions/jira.md)
   - [Docs Conventions](conventions/docs.md)
 - [development](development/README.md) 개발
 - [operations](operations/README.md) 운영
   - [역할 분담](operations/roles.md)
-
 - [proposal](proposal/README.md) 기획
 - [design](design/README.md)
   - [로고](design/logo.md)
-
 - [research](research/README.md) 공부
   - [하둡 실습](research/hadoop/README.md)
     - [하둡 실습을 위한 EC2 발급](research/hadoop/create-ec2-instance.md)
@@ -41,4 +40,5 @@
   - [관계자 제공 - 유사 작품 레퍼런스 - 파일](expert-interview/related_works.pdf)
   - [관계자 제공 - 조직 규모 추적 레퍼런스 - 파일](expert-interview/reference_analysis.pdf)
   - [1차 인터뷰 정리 및 추가 자료 조사](expert-interview/first-wrap-up.md)
+
 
