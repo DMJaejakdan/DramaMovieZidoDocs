@@ -41,7 +41,7 @@
    만들어진 키를 authorized 파일에 추가함으로써 해당 키를 소유한 모든 시스템에 권한을 부여한다. 이를 통해 시스템과 원격 서버 간 비밀 번호 없는 인증이 가능해진다.
    ```bash
    cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-   chmod 0600 ~/./ssh/authorized_keys
+   chmod 0600 ~/.ssh/authorized_keys
    ```
 
 3. ### Host에 localhost 추가
@@ -105,20 +105,41 @@
 
 # 4. 하둡 초기 설정
 
-1. ### `etc/hadoop/hadoop-env.sh`에 HADOOP_HOME 환경변수 설정
+1. ### `hdfs` 명령어 사용을 위한 환경변수 등록
+
+   ```bash
+   vim ~/.bashrc
+   ```
+   basrhcr 내부에서 다음 줄 삽입
+
+   ```shell
+   # HADOOP_HOME
+   export HADOOP_HOME=<하둡 설치 경로>
+   export PATH=$PATH:<하둡 설치 경로>/bin
+   
+   # HADOOP_CONF_DIR
+   export HADDOP_CONF_DIR=<하둡 설치 경로>/etc/hadoop
+   ```
+
+   ```bash
+   source ~/.bashrc
+   ```
+
+2. ### `etc/hadoop/hadoop-env.sh`에 HADOOP_HOME 환경변수 설정
+
    ![](images/hadoop05.PNG)
-2. ### `etc/hadoop/core-site.xml`에서 기본 파일 시스템 URI 수정
+3. ### `etc/hadoop/core-site.xml`에서 기본 파일 시스템 URI 수정
    - Hadoop file system 명령어나 API를 이용해 하둡에 접근할 때 파일 시스템 URI를 지정하지 않으면 `localhost`의 `9000`번 포트를 이용해 HDFS 클러스터에 접근할 것임을 명시
    - 로컬에서의 개발, 혹은 테스트에서 흔히 하는 설정
    ```xml
    <configuration>
        <property>
-           <name>fs.default.name</name>
-           <value>hdfs://localhost:9000</value>
-       </property>
+           <name>fs.defaultFS</name>
+           <value>hdfs://<public DNS name of EC2 instance>:9000</value>
+       </property>.
    </configuration>
    ```
-3. ### `etc/hadoop/hdfs-site.xml`에서 replica의 수를 1로, 기본 block 크기를 256MB로 설정
+4. ### `etc/hadoop/hdfs-site.xml`에서 replica의 수를 1로, 기본 block 크기를 256MB로 설정
    ```xml
    <configuration>
        <property>
@@ -131,9 +152,9 @@
        </property>
    </configuration>
    ```
-4. ### Namenode 포맷
+5. ### Namenode 포맷
    ```bash
-   bin/hadoop namenode -format
+   hadoop namenode -format
    ```
 
 # 5. DFS 실행
@@ -169,13 +190,13 @@
 1. ### HDFS에 user-specific directory 생성
 
    ```bash
-   bin/hadoop fs -mkdir -p /user/<username>
+   hadoop fs -mkdir -p /user/<username>
    ```
 
 2. ### HDFS에 파일 업로드 해보기
 
    ```bash
-   bin/hadoop fs -put NOTICE.txt input
+   hadoop fs -put NOTICE.txt input
    ```
 
 # 기타. 하둡 관련
@@ -188,53 +209,53 @@
 ## 2. 하둡 명령어
 ### help
 ```bash
-bin/haddop fs -help
+haddop fs -help
 ```
 
 ### Copy local file to HDFS
 
 ```bash
-bin/hadoop fs -copyFromLocal <local 경로> <HDFS 경로>
+hadoop fs -copyFromLocal <local 경로> <HDFS 경로>
 ```
 
 ```bash
-bin/hadoop fs -put <local 경로> <HDFS 경로> 
+hadoop fs -put <local 경로> <HDFS 경로> 
 ```
 
 ### Copy HDFS file to local
 
 ```bash
-bin/hadoop fs -copyToLocal <HDFS 경로> <local 경로>
+hadoop fs -copyToLocal <HDFS 경로> <local 경로>
 ```
 
 ### HDFS file listing
 
 ```bash
-bin/hadoop fs -ls
+hadoop fs -ls
 ```
 
 ### Local file listing
 
 ```bash
-bin/hadoop fs -ls file://
+hadoop fs -ls file://
 ```
 
 ### HDFS health check 1
 
 ```bash
-bin/hadoop dfsadmin -report
+hadoop dfsadmin -report
 ```
 
 ### HDFS health check 2 - file and blocks
 
 ```bash
-bin/hdfs fsck / -files -blocks
+hdfs fsck / -files -blocks
 ```
 
 ### HDFS health check 3
 
 ```bash
-bin/hdfs dfs -stat "%b %F %g %n %o %r %u %y %Y" <file on HDFS>
+hdfs dfs -stat "%b %F %g %n %o %r %u %y %Y" <file on HDFS>
 ```
 - `stat`: file이나 directory의 metadata를 보여주는 명령어
 - `%b`: Block size in bytes.
