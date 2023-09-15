@@ -11,6 +11,8 @@
 # Documentation
 
 - [architecture](architecture/README.md) 설계
+  - [ERD](architecture/erd.md)
+
 - [conventions](conventions/README.md) 컨벤션
   - [Jira Conventions](conventions/jira.md)
   - [Docs Conventions](conventions/docs.md)
@@ -31,5 +33,4 @@
     - [프로젝트 소개 및 사전 질문 - 파일](mentoring/first/project_introduction_and_pre_questions.pdf)
     - [사전 질문 점검](mentoring/first/checking-pre-queston.md)
     - [멘티 활동 일지 - 파일](mentoring/first/mentoring-program-review.pdf)
-
 
