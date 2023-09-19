@@ -13,8 +13,10 @@
 - [architecture](architecture/README.md) 설계
   - [ERD](architecture/erd.md)
 - [conventions](conventions/README.md) 컨벤션
+  - [GIt Conventions](conventions/git.md)
   - [Jira Conventions](conventions/jira.md)
   - [Docs Conventions](conventions/docs.md)
+  
 - [development](development/README.md) 개발
 - [operations](operations/README.md) 운영
   - [역할 분담](operations/roles.md)
@@ -26,9 +28,12 @@
     - [하둡 실습을 위한 EC2 발급](research/hadoop/create-ec2-instance.md)
     - [EC2 위에 하둡 올리기](research/hadoop/hdfs-on-ec2.md)
     - [MapReduce 실습하기](research/hadoop/practice-mapreduce.md)
-  
+
 - [review](review/README.md) 회고
 - [seminar](seminar/README.md) 세미나
+- [presentation](presentation/README.md) 발표
+  - [기획 발표 - 파일](presentation/planning-presentation.pdf)
+
 - [mentoring](mentoring/README.md) 전문가 리뷰
   - [1차 전문가 리뷰](mentoring/first/README.md)
     - [전문가 리뷰 사전 설문](mentoring/first/pre-survey.md)
