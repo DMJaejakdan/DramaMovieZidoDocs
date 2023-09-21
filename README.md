@@ -28,8 +28,12 @@
     - [하둡 실습을 위한 EC2 발급](research/hadoop/create-ec2-instance.md)
     - [EC2 위에 하둡 올리기](research/hadoop/hdfs-on-ec2.md)
     - [MapReduce 실습하기](research/hadoop/practice-mapreduce.md)
-
+  - [ElasticSearch 실습](research/elasticsearch/README.md)
+    - [ElasticSearch 시작하기](research/elasticsearch/getting-started.md)
+  
 - [review](review/README.md) 회고
+  - [검색 기능 개발자의 뚝딱대는 로그](review/log-of-search-developers.md)
+
 - [seminar](seminar/README.md) 세미나
 - [presentation](presentation/README.md) 발표
   - [기획 발표 - 파일](presentation/planning-presentation.pdf)
@@ -43,6 +47,8 @@
   - [2차 전문가 리뷰](mentoring/second/README.md)
     - [전문가 리뷰 사전 질문](mentoring/second/pre-survey.md)
     - [프로젝트 소개 및 사전 질문 - 파일](mentoring/second/project_introduction_and_pre_questions.pdf)
+    - [프로젝트 소개 및 사전 질문 v2 - 파일](mentoring/second/project_introduction_and_pre_questions_v2.pdf)
+    - [멘티 활동 일지 - 파일](mentoring/second/mentoring-program-review.pdf)
 - [expert-interview](expert-interview/README.md) 드라마 관계자 인터뷰
   - [1차 드라마 관계자 인터뷰](expert-interview/first-interview.md)
   - [관계자 제공 - 유사 작품 레퍼런스 - 파일](expert-interview/related_works.pdf)
